@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GroupFileByDate
@@ -17,5 +12,11 @@ namespace GroupFileByDate
             InitializeComponent();
         }
 
+        private void SelectFolder(object sender, EventArgs e)
+        {
+            var path = new FolderBrowserDialog();
+            path.ShowDialog();
+            this.label_path.Text = path.SelectedPath;
+        }
     }
 }
