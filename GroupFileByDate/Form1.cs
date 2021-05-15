@@ -24,7 +24,10 @@ namespace GroupFileByDate
         {
             DirectoryInfo di = new DirectoryInfo(this.label_path.Text);
             var files = di.GetFiles();
-            this.label_file_count_content.Text = files.Length + "";
+            this.progressBar1.Minimum = 1;
+            this.progressBar1.Maximum = files.Length;
+            this.progressBar1.Value = 1;
+            this.progressBar1.Step = 1;
             foreach (var group in files.GroupBy(file => file.LastWriteTime.ToShortDateString()))
             {
                 var basePath = String.Join("_", group.Key.Split("/").Select(x => x.PadLeft(2, '0')));
@@ -32,6 +35,7 @@ namespace GroupFileByDate
                 foreach (var file in group)
                 {
                     File.Move(file.FullName, Path.Combine(this.label_path.Text, basePath, file.Name));
+                    this.progressBar1.PerformStep();
                 }
             }
         }

@@ -33,9 +33,7 @@ namespace GroupFileByDate
             this.button_folder_select = new System.Windows.Forms.Button();
             this.label_path = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label_file_count = new System.Windows.Forms.Label();
             this.button_group_file = new System.Windows.Forms.Button();
-            this.label_file_count_content = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_title
@@ -70,20 +68,10 @@ namespace GroupFileByDate
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(81, 377);
+            this.progressBar1.Location = new System.Drawing.Point(81, 195);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(642, 29);
+            this.progressBar1.Size = new System.Drawing.Size(642, 65);
             this.progressBar1.TabIndex = 4;
-            // 
-            // label_file_count
-            // 
-            this.label_file_count.AutoSize = true;
-            this.label_file_count.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_file_count.Location = new System.Drawing.Point(40, 180);
-            this.label_file_count.Name = "label_file_count";
-            this.label_file_count.Size = new System.Drawing.Size(148, 35);
-            this.label_file_count.TabIndex = 5;
-            this.label_file_count.Text = "File Count:";
             // 
             // button_group_file
             // 
@@ -96,24 +84,13 @@ namespace GroupFileByDate
             this.button_group_file.UseVisualStyleBackColor = true;
             this.button_group_file.Click += new System.EventHandler(this.GroupFile);
             // 
-            // label_file_count_content
-            // 
-            this.label_file_count_content.AutoSize = true;
-            this.label_file_count_content.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_file_count_content.Location = new System.Drawing.Point(194, 180);
-            this.label_file_count_content.Name = "label_file_count_content";
-            this.label_file_count_content.Size = new System.Drawing.Size(0, 35);
-            this.label_file_count_content.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_file_count_content);
+            this.ClientSize = new System.Drawing.Size(800, 331);
             this.Controls.Add(this.button_group_file);
-            this.Controls.Add(this.label_file_count);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label_path);
             this.Controls.Add(this.button_folder_select);
@@ -132,9 +109,7 @@ namespace GroupFileByDate
         private System.Windows.Forms.Button button_folder_select;
         private System.Windows.Forms.Label label_path;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label_file_count;
         private System.Windows.Forms.Button button_group_file;
-        private System.Windows.Forms.Label label_file_count_content;
     }
 }
 
